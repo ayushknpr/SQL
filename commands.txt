@@ -1,0 +1,91 @@
+git --version
+git config -global user.name Vikash
+git config -global user.email vikashg84@gmail.com
+git init
+git status
+touch file1.html
+git status
+git add file1.html
+git status    (it will show file in staging state)
+git commit -m "Initial stage"    # first time need to do any file in commit, to start the git version control
+git commit -a -m "massage"    #its add all file to staging area and commit in single step
+git status
+touch file1.html
+touch file2.html
+git status
+git add -A               # it add all file from untracked status to staging state
+#if some file get modified and in modified state and what to recover previous version
+git checkout file1.html  # it match the file with last commit git repo and restore the older version
+
+git checkout -f  # it match all file with last commit 
+
+git log
+
+git log -p -1    # filter out commit logs from log file, -1 will return last commit file and logs
+
+
+git diff   #it compare the current working directory with staging directory and show the content from both files
+
+git diff --staged    # it compare your staging are with last commit code
+
+git rm --cached filename    #remove file from commit and staging area
+
+git rm filename    #remove any file from present working tree or directory
+
+git status -s   #its show only those file who got modified/untracked or unmodified
+
+touch .gitignore   # create .gitignore file for ignore the file/folder which don't want to track or commit.
+
+main branch is master branch
+
+git branch    #this command show how many branch are created
+
+git branch <branch_name>   # to create new branch in repository
+
+git checkout <branch_name>   # command to change the branch from current to mention branch in command
+
+git merge feature1  # this command will merge the feature1 branch into current branch.
+
+git restore --staged <file_name>    #this command take back the file from staging area to working directory
+
+git checkout -f   #change the commit code in working tree
+
+git checkout -b <new_branch_name>
+
+git config --global alias.st status   #this command replace the status command with st
+
+git st    #this command will behave like git status command
+
+git config --global alias.unstage 'restore --staged --'   #this command will replace cotted command with unstage keyword
+
+git unstage <file_name>    #this command will unstage the file from staging area.
+
+
+git rm .git   #remove git repository and now git status commmand will not working
+
+
+git tag v1    #this command will tag the last commit code with name v1
+
+git tag list    #this command will show all tag list
+
+git show <tag_name>   #this command will show all information about that associated commit
+
+git tag -d <tag_name>     #this command will delete the tag
+
+git remote add origin <url_of_repo>   # this will connect remote repo with origin connection
+
+git remote
+
+git remote -v   # this command show all remote repository added link with its tagged names.
+
+git push origin <branch_name>   #this command will push the tag to remote repository with tag name. kind of release the code
+
+git push origin <tag_name>   #this command will push the tag to remote repository with tag name. kind of release the code
+
+git remote set-url origin <github repository url name>   #change the remote repo url
+
+
+
+git push -U origin master  # this command will push the code from local (master branch) to remote link branch (origin)
+
+git pull 

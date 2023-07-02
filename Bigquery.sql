@@ -1,1 +1,1 @@
-SLECT * FROM Table1 where  
+SLECT * FROM Table1 where column =1
